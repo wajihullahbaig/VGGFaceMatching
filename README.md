@@ -21,6 +21,10 @@ You can see the References section to read more about caffe,vgg,face detect etc.
 
 
 ## Running the code
+
+First download the pretrained model and prototxt file from 
+		
+		http://www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caffe.tar.gz
 	
 Make sure you have correct paths for
 
@@ -70,7 +74,7 @@ Caffe researchers claim to have better accuracy on mean image substraction. In m
 better accuracies. The claim seems to hold in my tests.
 
 ##  Point of interest
-During face extraction, Hugh Grant folder ended with a image of Sandra Bullock. This was face detection output from an image where Hugh Grant and Sandra Bullock
+During face extraction, Hugh Grants folder ended with an image of Sandra Bullock. This was face detection output from an image where Hugh Grant and Sandra Bullock
 were together. So I removed Sandra Bullock's image and replaced it with that of Hugh Grant's.
 
 
