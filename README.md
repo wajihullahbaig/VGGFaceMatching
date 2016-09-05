@@ -46,16 +46,17 @@ Finally run EERCalculation and wait for the output graphs and watch the console 
 Total Genuine Matches = 2800
 Total Imposter Matches = 4950
 
-*A genuine match is as follows*
-   1_1 vs 1_2
-   1_1 vs 1_2
-   ...
-   1_1 vs 1_8
-*An imposter match is as follow*
-   1_1 vs 2_1
-   1_1 vs 3_1
-   ...
-   99_1 vs 100_1
+	*A genuine match is as follows*
+	   1_1 vs 1_2
+	   1_1 vs 1_2
+	   ...
+	   1_1 vs 1_8
+   
+	*An imposter match is as follow*
+	   1_1 vs 2_1
+	   1_1 vs 3_1
+	   ...
+	   99_1 vs 100_1
    
 Note that LFW dataset does not have images named 1_1.jpg, rather as firstname_lastname_0001.jpg. The code takes care of following the FVC
 matching protocol. This was possible because LFW data has images of individuals with 8 or images.
@@ -70,11 +71,11 @@ were together. So I removed Sandra Bullock's image and replaced it with that of 
 
 
 ## References
-http://vis-www.cs.umass.edu/lfw/
-http://markusmathias.bitbucket.org/2014_eccv_face_detection/
-http://www.vlfeat.org/matconvnet/pretrained/
-http://www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caffe.tar.gz
-https://github.com/musicfish1973/vgg_face_matconvnet
-https://github.com/PatienceKai/VGG_Face_Caffe_Model
-https://github.com/eglxiang/vgg_face
-https://github.com/jesu9/VGGFeatExtract
+		http://vis-www.cs.umass.edu/lfw/
+		http://markusmathias.bitbucket.org/2014_eccv_face_detection/
+		http://www.vlfeat.org/matconvnet/pretrained/
+		http://www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caffe.tar.gz
+		https://github.com/musicfish1973/vgg_face_matconvnet
+		https://github.com/PatienceKai/VGG_Face_Caffe_Model
+		https://github.com/eglxiang/vgg_face
+		https://github.com/jesu9/VGGFeatExtract
