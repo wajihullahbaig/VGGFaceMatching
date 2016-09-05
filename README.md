@@ -38,7 +38,7 @@ Finally run EERCalculation and wait for the output graphs and watch the console 
 
 ## Matching Results
 
-| EER (100%)	|
+| EER (100%)	| Remarks
 | ------------- |:------------------------------:|
 | 6.4%      	| Without mean image subtraction |
 | 5.75%         | With mean image subtraction    |
