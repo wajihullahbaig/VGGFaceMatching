@@ -43,8 +43,8 @@ Finally run EERCalculation and wait for the output graphs and watch the console 
 | 6.4%      	| Without mean image subtraction |
 | 5.75%         | With mean image subtraction    |
 
-Total Genuine Matches = 2800
-Total Imposter Matches = 4950
+	Total Genuine Matches = 2800
+	Total Imposter Matches = 4950
 
 ![alt tag](https://github.com/wajihullahbaig/VGGFaceMatching/blob/master/ScreenShots/genuin-imposter-distribution.jpg)
 ![alt tag](https://github.com/wajihullahbaig/VGGFaceMatching/blob/master/ScreenShots/threshold.jpg)
