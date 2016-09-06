@@ -42,16 +42,24 @@ Finally run EERCalculation and wait for the output graphs and watch the console 
 
 ## Matching Results
 
+### With FVC Protocol
 | EER (100%)	| Remarks
 | ------------- |:------------------------------:|
 | 6.4%      	| Without mean image subtraction |
 | 5.75%         | With mean image subtraction    |
 
+
 	Total Genuine Matches = 2800
 	Total Imposter Matches = 4950
-
+	
+### Diagrams
+		
+	
+#### Genuine-Imposter Distribution	
 ![alt tag](https://github.com/wajihullahbaig/VGGFaceMatching/blob/master/ScreenShots/genuin-imposter-distribution.jpg)
+#### Threshold
 ![alt tag](https://github.com/wajihullahbaig/VGGFaceMatching/blob/master/ScreenShots/threshold.jpg)
+#### ROC
 ![alt tag](https://github.com/wajihullahbaig/VGGFaceMatching/blob/master/ScreenShots/roc.jpg)
 
 	*A genuine match is as follows*
@@ -65,9 +73,15 @@ Finally run EERCalculation and wait for the output graphs and watch the console 
 	   1_1 vs 3_1
 	   ...
 	   99_1 vs 100_1
-   
+
 Note that LFW dataset does not have images named 1_1.jpg, rather as firstname_lastname_0001.jpg. The code takes care of following the FVC
 matching protocol. This was possible because LFW data has images of individuals with 8 or images.
+
+### With SVM Classification
+
+Using SVM classification, a touch better accuracy is achieved when that data set for each individual is split by 75% for training 25% to testing.
+That is 6 images for training and 2 images for testing. The code handles creating the train/test split and formats the data acceptable by SVM
+Match with SVM has an accuracy of 95% - A touch better plain vector to vector matching as in FVC protocol
 
    
 Caffe researchers claim to have better accuracy on mean image substraction. In my tests, I have subtracted mean of the image from itself to produce
