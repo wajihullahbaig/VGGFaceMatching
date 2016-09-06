@@ -10,7 +10,7 @@ featuresFolder = '../Outputs/'
 savePath = '../EER-FVCProtocol/'
 fileList = os.listdir(featuresFolder)
 fileList.sort()
-trainingtestingRatio = 0.80
+trainingtestingRatio = 0.8
 trainingLabels = []
 trainingData = []
 testingLabels = []
@@ -33,7 +33,9 @@ for h in range(0,793,8):
         fileNameA =  splits[0]+'_000'+str(i)+fileExtension                                 
         featureVector = np.load(featuresFolder +fileNameA)
         trainingLabels.append(folderCount)
-        trainingData.append(np.asarray(featureVector.item()['fc7']))
+        featureVector = np.asarray(featureVector.item()['fc7'])[0,:]
+        vMax = max(featureVector)
+        trainingData.append(featureVector/vMax)
         print 'Splitting for training :' + fileNameA + ' Split Ratio = ' + str(trainingtestingRatio)              
         
     #Testing split    
@@ -42,7 +44,9 @@ for h in range(0,793,8):
         fileNameA =  splits[0]+'_000'+str(i)+fileExtension                                 
         featureVector = np.load(featuresFolder +fileNameA)
         testingLabels.append(folderCount)
-        testingData.append(np.asarray(featureVector.item()['fc7']))
+        featureVector = np.asarray(featureVector.item()['fc7'])[0,:]
+        vMax = max(featureVector)        
+        testingData.append(featureVector/vMax)
         print 'Splitting for testing:' + fileNameA + ' Split Ratio = ' + str(1.0-trainingtestingRatio)
     
     folderCount += 1
@@ -51,7 +55,7 @@ for h in range(0,793,8):
 # Now feed the data to SVM classifier
 formattedTrainingData  = np.asarray(trainingData).squeeze()
 formattedTrainingLabels  = np.asarray(trainingLabels).squeeze()
-classifier = svm.SVC(gamma=1/15000)
+classifier = svm.SVC()
 
 print '\r\n'
 print 'Training the SVM classifier' 

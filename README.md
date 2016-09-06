@@ -43,11 +43,13 @@ Finally run EERCalculation and wait for the output graphs and watch the console 
 ## Matching Results
 
 ### With FVC Protocol
+
 | EER (100%)	| Remarks
 | ------------- |:------------------------------:|
-| 6.4%      	| Without mean image subtraction |
-| 5.75%         | With mean image subtraction    |
+| 6.4   	   	| Without mean image subtraction |
+| 5.7	        | With mean image subtraction    |
 
+6.4 EER means a accuracy of 93.6% and 5.75 EER means a accuracy of 94.25%  
 
 	Total Genuine Matches = 2800
 	Total Imposter Matches = 4950
@@ -80,8 +82,16 @@ matching protocol. This was possible because LFW data has images of individuals 
 ### With SVM Classification
 
 Using SVM classification, a touch better accuracy is achieved when that data set for each individual is split by 75% for training 25% to testing.
-That is 6 images for training and 2 images for testing. The code handles creating the train/test split and formats the data acceptable by SVM.
-The SVM based matching performs at 95% accuracy - A touch better plain vector to vector matching as in FVC protocol.
+That is 6 images for training and 2 images for testing. The code handles creating the train/test split and formats the data acceptable by SVM. Note that face image features were extracted using mean image subtraction as explained above.
+
+| Accuracy (100%) | Remarks 
+| --------------- |:----------------------------------------------------:|
+| 81.0%      	  | SVC default parameters		   						 |
+| 95%             | gamma = 1/15000, without max value normalization     |
+| 96%             | SVC default parameters, with max value normalization |
+
+
+Using a small trick, a better accuracy is achieved. Each feature vector is divided by the maximum value it contains. This pushes the accuracy to 96% on default SVC parameters.
 
    
 Caffe researchers claim to have better accuracy on mean image substraction. In my tests, I have subtracted mean of the image from itself to produce
