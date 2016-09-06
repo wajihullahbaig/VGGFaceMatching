@@ -77,6 +77,12 @@ better accuracies. The claim seems to hold in my tests.
 During face extraction, Hugh Grants folder ended with an image of Sandra Bullock. This was face detection output from an image where Hugh Grant and Sandra Bullock
 were together. So I removed Sandra Bullock's image and replaced it with that of Hugh Grant's.
 
+## Development Tools/Platform/etc
+
+	Ubuntu 16.04
+	Caffe
+	Eclipse Neon
+	
 
 ## References
 		http://vis-www.cs.umass.edu/lfw/
