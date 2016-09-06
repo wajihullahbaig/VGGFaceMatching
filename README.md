@@ -82,7 +82,7 @@ matching protocol. This was possible because LFW data has images of individuals 
 ### With SVM Classification
 
 Using SVM classification, a touch better accuracy is achieved when that data set for each individual is split by 75% for training 25% to testing.
-That is 6 images for training and 2 images for testing. The code handles creating the train/test split and formats the data acceptable by SVM. Note that face image features were extracted using mean image subtraction as explained above.
+That is 6 images for training and 2 images for testing. The code handles creating the train/test split and formats the data acceptable by SVM. Note that face image features were extracted using mean image subtraction as explained below.
 
 | Accuracy (100%) | Remarks 
 | --------------- |:----------------------------------------------------:|
