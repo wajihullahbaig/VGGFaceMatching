@@ -80,8 +80,8 @@ matching protocol. This was possible because LFW data has images of individuals 
 ### With SVM Classification
 
 Using SVM classification, a touch better accuracy is achieved when that data set for each individual is split by 75% for training 25% to testing.
-That is 6 images for training and 2 images for testing. The code handles creating the train/test split and formats the data acceptable by SVM
-Match with SVM has an accuracy of 95% - A touch better plain vector to vector matching as in FVC protocol
+That is 6 images for training and 2 images for testing. The code handles creating the train/test split and formats the data acceptable by SVM.
+The SVM based matching performs at 95% accuracy - A touch better plain vector to vector matching as in FVC protocol.
 
    
 Caffe researchers claim to have better accuracy on mean image substraction. In my tests, I have subtracted mean of the image from itself to produce
